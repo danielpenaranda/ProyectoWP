@@ -10,4 +10,5 @@ package com.fractalgames.dao;
  */
 public interface RegisterDao {
     
+    
 }

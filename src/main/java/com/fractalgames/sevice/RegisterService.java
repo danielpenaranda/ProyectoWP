@@ -10,4 +10,5 @@ package com.fractalgames.sevice;
  */
 public interface RegisterService {
     
+    
 }

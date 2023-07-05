@@ -10,4 +10,6 @@ package com.fractalgames.controller;
  */
 public class RegisterController {
     
+    
+    
 }

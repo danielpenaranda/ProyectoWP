@@ -10,4 +10,5 @@ package com.fractalgames.domain;
  */
 public class Register {
     
+    
 }
