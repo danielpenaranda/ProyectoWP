@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com.fractalgames.controller;
 
 import org.springframework.stereotype.Controller;
@@ -12,5 +9,10 @@ public class IndexController {
     @GetMapping("/index")
     public String getIndexPage() {
         return "index";
+    }
+    
+    @GetMapping("/listado")
+    public String getRegisterPage() {
+        return "/registro/listado";
     }
 }
