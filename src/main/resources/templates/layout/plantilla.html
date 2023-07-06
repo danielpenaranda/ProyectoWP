@@ -33,23 +33,23 @@
                         </li>
                     </ul>
                 </div>
-                
+
                 <div class="menu-right nav justify-content-end menu-opciones">
                     <ul class="navbar-nav m-0 p-0 menu-opciones ml-auto">
-
+                        
                         <li class="nav-item "><button type="button" class="btn carrito btn-white" th:href="@{/register/listado}">
-                            <span class="material-symbols-outlined">
-                                shopping_cart
-                            </span>
-                        </button></li>
+                                <span class="material-symbols-outlined">
+                                    shopping_cart
+                                </span>
+                            </button></li>
                         <li class="nav-item px-2"><a class="nav-menu-link nav-link d-flex align-items-center" th:href="@{/login/listado}">[[#{plantilla.login}]]</a></li>
                         <li class="nav-item px-2"><a class="nav-menu-link nav-link d-flex align-items-center" th:href="@{/registro/listado}">[[#{plantilla.register}]]</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-        
-        
+
+
     </header>
     <footer th:fragment="footer" class="text-white mt-5 p-2">
         <div class="container-fluid">

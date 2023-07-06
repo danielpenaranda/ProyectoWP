@@ -16,6 +16,7 @@ import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 import jakarta.persistence.UniqueConstraint;
+import java.io.Serializable;
 import java.util.Collection;
 import lombok.Data;
 
@@ -24,7 +25,7 @@ import lombok.Data;
 //Se mapea usuarios y con uniqueConstraints = @UniqueConstraint(columnNames = "email") estamos indicando que la
 //columna de email va a ser unica
 @Table(name = "usuarios", uniqueConstraints = @UniqueConstraint(columnNames = "email"))
-public class Usuario {
+public class Usuario implements Serializable{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -37,6 +38,7 @@ public class Usuario {
     @Column(name="apellido")
     private String apellido;
     private String email;
+    private boolean activo;
     private String password;
     
     //Se agrega la relacion de muchos a muchos ManyToMany
@@ -64,12 +66,13 @@ public class Usuario {
         this.password=password;
         this.roles=roles;
     }
-    public Usuario(Long id, String nombre,String apellido, String email, String password, Collection roles){
+    public Usuario(Long id, String nombre,String apellido, String email, boolean activo, String password, Collection roles){
         super();
         this.id=id;
         this.nombre=nombre;
         this.apellido=apellido;
         this.email=email;
+        this.activo=activo;
         this.password=password;
         this.roles=roles;
     }
@@ -105,6 +108,13 @@ public class Usuario {
         this.email = email;
     }
 
+    public boolean isActivo() {
+        return activo;
+    }
+
+    public void setActivo(boolean activo) {
+        this.activo = activo;
+    }
  
     public String getPassword() {
         return password;

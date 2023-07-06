@@ -15,4 +15,9 @@ public class IndexController {
     public String getRegisterPage() {
         return "/registro/listado";
     }
+    
+    @GetMapping("/login")
+    public String getloginPage() {
+        return "/login/listado";
+    }
 }

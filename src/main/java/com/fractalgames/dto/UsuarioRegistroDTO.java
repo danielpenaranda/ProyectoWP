@@ -6,13 +6,15 @@ public class UsuarioRegistroDTO {
     private String nombre;
     private String apellido;
     private String email;
+    private boolean activo;
     private String password;
 
-    public UsuarioRegistroDTO(Long id, String nombre, String apellido, String email, String password) {
+    public UsuarioRegistroDTO(Long id, String nombre, String apellido, String email, boolean activo, String password) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
         this.email = email;
+        this.activo= activo;
         this.password = password;
     }
 
@@ -54,6 +56,15 @@ public class UsuarioRegistroDTO {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public boolean isActivo() {
+        return activo;
+    }
+
+    public void setActivo(boolean activo) {
+        this.activo = activo;
+    }
+    
 
     public String getPassword() {
         return password;
