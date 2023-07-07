@@ -31,7 +31,7 @@ public class RegisterController {
     @PostMapping("/guardar")
     public String guardarUsuario(@ModelAttribute("usuario") UsuarioRegistroDTO usuarioDTO) {
         usuarioservice.save(usuarioDTO);
-        return "redirect:/index";
+        return "redirect:/login/listado";
     }
     
 }

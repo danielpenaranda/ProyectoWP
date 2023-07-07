@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+    <head th:replace="~{layout/plantilla :: head}">
+        <link rel="stylesheet" href="css/gamescards.css">
+            <title>FractalGames</title>
+    </head>
+    <body>
+        <section th:fragment="juegos">
+            <div class="container">
+                <div class="row">
+                    <h1 class="text-center">Ofertas de Videojuegos</h1>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card">
+                            <img src="/img/spiderman4.jpg" class="card-img-top" alt="Spiderman">
+                                <div class="card-body">
+                                    <h5 class="card-title">Spider-man</h5>
+                                    <p class="card-text">Spider-Man es un emocionante juego de acción y aventura que te sumerge en el papel del icónico superhéroe arácnido. Ambientado en la vibrante ciudad de Nueva York, asumes el control de Peter Parker y su alter ego, Spider-Man, mientras luchas contra el crimen y proteges la ciudad de villanos peligrosos.</p>
+                                    <a href="#" class="btn btn-primary">Comprar</a>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card">
+                            <img src="/img/godofwar.jpg" class="card-img-top" alt="God Of War">
+                                <div class="card-body">
+                                    <h5 class="card-title">God Of War 2</h5>
+                                    <p class="card-text">uego de acción y aventura que narra la historia de Kratos, un poderoso guerrero espartano. En esta entrega, Kratos se embarca en un viaje lleno de peligros y desafíos a través de los reinos de la mitología nórdica.</p>
+                                    <a href="#" class="btn btn-primary">Comprar</a>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card">
+                            <img src="/img/godof3.jpg" class="card-img-top" alt="Game 3">
+                                <div class="card-body">
+                                    <h5 class="card-title">God Of War</h5>
+                                    <p class="card-text">God of War 3 es un emocionante juego de acción y aventura que te sumerge en la épica historia de venganza de Kratos, el poderoso y despiadado dios de la guerra. Ambientado en un impresionante mundo de dioses y monstruos de la mitología griega, te enfrentarás a intensas batallas, resolverás acertijos desafiantes y explorarás escenarios épicos mientras te abres paso hacia la cima del monte Olimpo..</p>
+                                    <a href="#" class="btn btn-primary">Comprar</a>
+                                </div>
+                        </div>
+                    </div>
+                    <!-- mas videojuegos -->
+                </div>
+            </div>
+        </section>
+
+    </body>
+</html>
+
