@@ -1,5 +1,5 @@
-
 package com.fractalgames.controller;
+
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,11 +13,8 @@ public class IndexController {
     
     @GetMapping("/listado")
     public String getRegisterPage() {
-        return "/registro/listado";
+        // Antes: return "/registro/listado";
+        return "registro/listado";
     }
     
-    @GetMapping("/login")
-    public String getloginPage() {
-        return "/login/listado";
-    }
 }

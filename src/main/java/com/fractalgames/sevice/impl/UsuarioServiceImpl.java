@@ -49,6 +49,20 @@ public class UsuarioServiceImpl implements UsuarioService{
         return usuarioRepository.save(usuario);
     }
 
+    
+    @Override
+    public boolean validarCredenciales(String email, String password) {
+        Usuario usuario = usuarioRepository.findByEmail(email);
+        if (usuario == null) {
+            return false;
+        }
+        return usuario.getPassword().equals(password);
+    }
+    @Override
+    public Usuario findByEmail(String email) {
+        return usuarioRepository.findByEmail(email);
+    }
+
 
     
 }

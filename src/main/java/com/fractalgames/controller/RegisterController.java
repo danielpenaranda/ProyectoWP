@@ -23,15 +23,15 @@ public class RegisterController {
     }
     
     @GetMapping("/listado")
-    public String mostrarFormularioRegister(){
-        return "/registro/listado";
+    public String mostrarFormularioRegister() {
+        // Antes: return "/registro/listado";
+        return "registro/listado";
     }
-    
+
     @PostMapping("/guardar")
     public String guardarUsuario(@ModelAttribute("usuario") UsuarioRegistroDTO usuarioDTO) {
         usuarioservice.save(usuarioDTO);
         return "redirect:/index";
     }
-    
     
 }
