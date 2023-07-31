@@ -1,0 +1,138 @@
+body {
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 0;
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 20px;
+    margin: 5px;
+    padding: 20px;
+}
+
+.caja {
+    background-color: gray;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+.c1 {
+    background-color: red;
+    grid-column: 1 / span 6;
+    display: flex; /* Usamos flexbox para colocar las imágenes en fila */
+    align-items: center; /* Centramos verticalmente las imágenes */
+    justify-content: space-between; /* Espacio entre las imágenes */
+}
+.c1 .imag-container {
+    display: flex; /* Aseguramos que las imágenes estén en fila */
+}
+
+.c1 img {
+    width: 110px; /* Puedes ajustar este valor según el tamaño deseado */
+    height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
+    border-radius: 8px; /* Opcional: Añade esquinas redondeadas a las imágenes */
+    margin-right: 310px; /* Espacio entre las imágenes */
+}
+
+.c2 {
+    background-color: black;
+    width: 200px;
+    grid-row: 2 / span 6;
+}
+
+
+.c2 h2 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.c2 button {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 8px 25px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block;
+    width: 70%;
+}
+.c2 .imag-container{
+    margin-top: 60px;
+}
+
+
+.item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+}
+/*.contenedor-foto img {
+    width: 200px; 
+    height: 150px; 
+    object-fit: cover; 
+    border-radius: 5px 5px 0 0; 
+}*/
+
+/* Estilo para las imágenes dentro de las cajas c3 y c4 */
+
+.item img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+}
+
+.item:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.descripcion {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.precio {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+button {
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 6px 8px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: gray;
+}
+button2 {
+    
+    border: none;
+    background-color: grey;
+    color: white;
+    padding: 6px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block; /* Aseguramos que las imágenes estén en columnas */
+    margin-top: 80px;
+}
+
+button2:hover {
+    background-color: gray;
+}
+
+
+
+
