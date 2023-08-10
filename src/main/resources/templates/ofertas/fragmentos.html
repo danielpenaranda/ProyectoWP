@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+    <head th:replace="~{layout/plantilla :: head}">
+        <title>FractalGames</title>
+    </head>
+    <body>
+        <section th:fragment="ofertas">
+            <div class="grid-layout">
+                <div class="caja c1">
+                    <div class="imag-container">
+                        <img src="/img/Nintendo-Logo.jpg" alt="">
+                            <img src="/img/Logo-xbox.jpg" alt="">
+                                <img src="/img/playstation.jpg" alt="">
+                                    <img src="/img/644.png" alt="">                 
+                                        </div>
+                                        </div>
+                                        <div class="caja c2">
+                                            <h2> Filtrar por precio</h2>
+                                            <button2>Precio: $1,00- $20,00</button2>
+                                            <button2>Precio: $20,00- $30,00</button2>
+                                            <button2>Precio: $30,00- $40,00</button2>
+                                            <button2>Precio: $40,00- $50,00</button2>
+
+                                            <div class="imag-container">
+                                                <a th:href="@{/index}" class="navbar-brand logo-home nav justify-content-end">
+                                                    <img class="img-logo"src="/img/logo.jpg" alt="logo"/>
+                                                </a>
+                                            </div>
+
+
+                                        </div>
+
+                                        <script src="/js/juegos.js"></script>
+                                        </div>
+                                        </section>
+
+
+                                        </body>
+                                        </html>
