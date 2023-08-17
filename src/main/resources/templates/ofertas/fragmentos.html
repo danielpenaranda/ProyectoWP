@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+    <head th:replace="~{layout/plantilla :: head}">
+        <title>FractalGames</title>
+    </head>
+    <body>
+        <section th:fragment="ofertas">
+            <div class="grid-layout">
+                <div class="cajaO o1">
+                    <div class="imag-container">
+                        <img src="/img/Nintendo-Logo.jpg" alt="">
+                            <img src="/img/Logo-xbox.jpg" alt="">
+                                <img src="/img/playstation.jpg" alt="">
+                                    <img src="/img/644.png" alt="">                 
+                                        </div>
+                                        </div>
+                                        <div class="cajaO o2">
+                                            <h2> Filtrar por precio</h2>
+                                            <button2>Precio: $1,00- $20,00</button2>
+                                            <button2>Precio: $20,00- $30,00</button2>
+                                            <button2>Precio: $30,00- $40,00</button2>
+                                            <button2>Precio: $40,00- $50,00</button2>
+
+                                            <div class="imag-container">
+                                                <a th:href="@{/index}" class="navbar-brand logo-home nav justify-content-end">
+                                                    <img class="img-logo"src="/img/logo.jpg" alt="logo"/>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="cajaO o3">
+                                            <h2>10% de descuento</h2>
+                                        </div>
+                                        <div class="cajaO o4">
+                                            <div class="item">
+                                                <div class="contenedor-foto">
+                                                    <img src="/img/DragonBallXenoverse2.jpg" alt="">
+                                                </div>
+                                                <p class="descripcion">Dragon Ball Xenoverse 2</p>
+                                                <span class="precioO">Antes: $37.99</span>
+                                                <span class="descuento">%10</span>
+                                                <span class="precioNuevo">$ 34.19</span>
+                                                <button>Añadir al carrito</button>
+                                            </div>
+                                        </div>
+                                        <div class="cajaO o5">
+                                            <div class="item">
+                                                <div class="contenedor-foto">
+                                                    <img src="\img\HD-wallpaper-Kylian-mbappe-fifa-22.jpg" alt="producto">
+                                                </div>
+                                                <div class="info-product">
+                                                    <p class="descripcion">FIFA 22</p>
+                                                    <span class="precioO">Antes: $39.00</span>
+                                                    <span class="descuento">%10</span>
+                                                    <span class="precioNuevo">$35.00</span>
+                                                    <button>Añadir al carrito</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cajaO o6">
+                                            <div class="item">
+                                                <div class="contenedor-foto">
+                                                    <img src="\img\TheQuarry.jpeg" alt="producto">
+                                                </div>
+                                                <div class="info-product">
+                                                    <p class="descripcion">The Quarry</p>
+                                                    <span class="precioO">Antes: $39.00</span>
+                                                    <span class="descuento">%10</span>
+                                                    <span class="precioNuevo">$35.00</span>
+                                                    <button>Añadir al carrito</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cajaO o7">
+                                            <h2>5% de descuento</h2>
+                                        </div>
+                                        <div class="cajaO o8">
+                                            <div class="item">
+                                                <div class="contenedor-foto">
+                                                    <img src="\img\metroid.jpg" alt="producto">
+                                                </div>
+                                                <div class="info-product">
+                                                    <p class="descripcion">Metroid</p>
+                                                    <span class="precioO">Antes: $49.99</span>
+                                                    <span class="descuento">%5</span>
+                                                    <span class="precioNuevo">$47.49</span>
+                                                    <button>Añadir al carrito</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cajaO o10">
+                                            <div class="item">
+                                                <div class="contenedor-foto">
+                                                    <img src="\img\Nier_Automata_cover_art.jpg" alt="producto">
+                                                </div>
+                                                <div class="info-product">
+                                                    <p class="descripcion">Nier Automata</p>
+                                                    <span class="precioO">Antes: $27.00</span>
+                                                    <span class="descuento">%5</span>
+                                                    <span class="precioNuevo">$25.65</span>
+                                                    <button>Añadir al carrito</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <script src="/js/juegos.js"></script>
+                                        </div>
+                                        </section>
+
+
+                                        </body>
+                                        </html>
