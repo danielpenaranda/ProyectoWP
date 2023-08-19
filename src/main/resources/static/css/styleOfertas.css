@@ -13,44 +13,44 @@ body {
     padding: 20px;
 }
 
-.caja {
+.cajaO {
     background-color: gray;
     padding: 20px;
     border-radius: 10px;
     color: white;
 }
 
-.c1 {
+.o1 {
     background-color: red;
     grid-column: 1 / span 6;
     display: flex; /* Usamos flexbox para colocar las imágenes en fila */
     align-items: center; /* Centramos verticalmente las imágenes */
     justify-content: space-between; /* Espacio entre las imágenes */
 }
-.c1 .imag-container {
+.o1 .imag-container {
     display: flex; /* Aseguramos que las imágenes estén en fila */
 }
 
-.c1 img {
+.o1 img {
     width: 110px; /* Puedes ajustar este valor según el tamaño deseado */
     height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
     border-radius: 8px; /* Opcional: Añade esquinas redondeadas a las imágenes */
     margin-right: 310px; /* Espacio entre las imágenes */
 }
 
-.c2 {
+.o2 {
     background-color: black;
     width: 200px;
-    grid-row: 2 / span 6;
+    grid-row: 2 / span 10;
 }
 
 
-.c2 h2 {
+.o2 h2 {
     color: white;
     margin-bottom: 10px;
 }
 
-.c2 button {
+.o2 button {
     background-color: black;
     border: none;
     color: white;
@@ -61,8 +61,21 @@ body {
     display: block;
     width: 70%;
 }
-.c2 .imag-container{
+.o2 .imag-container{
     margin-top: 60px;
+}
+
+.o3{
+    background-color: black;
+    font-weight: bold;
+    grid-column: 2 / span 6;
+    text-align: left;
+}
+.o7{
+    background-color: black;
+    font-weight: bold;
+    grid-column: 2 / span 6;
+    text-align: left;
 }
 
 .item {
@@ -80,7 +93,12 @@ body {
 }*/
 
 /* Estilo para las imágenes dentro de las cajas c3 y c4 */
-
+.oo3{
+    font-weight: bold;
+    grid-column: 2 / span 5;
+    text-align: left;
+    background-color: black;
+}
 .item img {
     width: 150px;
     height: 150px;
@@ -99,8 +117,18 @@ body {
     margin: 10px 0;
 }
 
-.precio {
-    font-size: 16px;
+.precioO {
+    background-color: red;
+    font-size: 15px;
+    font-weight: bold;
+}
+.descuento{
+    background-color: green;
+    font-size: 15px;
+    font-weight: bold;
+}
+.precioNuevo{
+        font-size: 16px;
     font-weight: bold;
 }
 
@@ -131,7 +159,4 @@ button2 {
 button2:hover {
     background-color: gray;
 }
-
-
-
 

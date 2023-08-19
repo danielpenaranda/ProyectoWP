@@ -22,6 +22,8 @@ public class Ofertas implements Serializable{
     private String nombreO;
     private String descripcion;
     private double precio;
+    private double descuento;
+    private double precioNuevo;
     private int existencias;
     private String rutaImagen;
     private boolean activo;
@@ -29,10 +31,12 @@ public class Ofertas implements Serializable{
     public Ofertas() {
     }
 
-    public Ofertas(String nombreO, String descripcion, double precio, int existencias, String rutaImagen, boolean activo) {
+    public Ofertas(String nombreO, String descripcion, double precio, double descuento, double precioNuevo, int existencias, String rutaImagen, boolean activo) {
         this.nombreO = nombreO;
         this.descripcion = descripcion;
         this.precio = precio;
+        this.descuento=descuento;
+        this.precioNuevo= precioNuevo;
         this.existencias = existencias;
         this.rutaImagen = rutaImagen;
         this.activo = activo;
