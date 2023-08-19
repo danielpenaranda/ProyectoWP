@@ -11,9 +11,14 @@
                 <div class="cont-login">
                     <div class="row justify-content-center ">
                         <div class="align-items-center">
+                            
+
                             <h1 class="text-center titu-reg">Iniciar sesión</h1>
+                            <span th:if="${error}" th:text="${error}" class="error-message"></span>
+                            
                             <form th:action="@{/login/guardar}" method="post" th:object="${usuario}">
                                 <div class="form-group">
+                                    
                                     <label class="control-label" for="email">Email:</label>
                                     <input id="email" type="email" class="form-control" th:field="*{email}" required autofocus="autofocus">
                                 </div>

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymleaf.org/thymleaf-extras-springsecurity6">
+    
     <head th:fragment="head">
         <title>FractalGames</title>
         <meta charset="UTF-8"/>
@@ -37,13 +39,28 @@
                 </div>
 
                 <div class="menu-right nav justify-content-end menu-opciones">
-                    <ul class="navbar-nav m-0 p-0 menu-opciones ml-auto">
-                        
-                        <li class="nav-item "><button type="button" class="btn carrito btn-white" th:href="@{/register/listado}">
+                    <ul class="navbar-nav m-0 p-0 menu-opciones ml-auto" sec:authorize="isAuthenticated()">
+                        <li class="nav-item"><button type="button" class="btn carrito btn-white" th:href="@{/register/listado}">
                                 <span class="material-symbols-outlined">
                                     shopping_cart
                                 </span>
                             </button></li>
+                        <li class="nav-item px-2"><span class="nav-menu-link nav-link d-flex align-items-center">Bienvenido, [[${#authentication.name}]]</span></li>
+                        <li class="nav-item px-2"><a class="nav-menu-link nav-link d-flex align-items-center" th:href="@{/logout}">Cerrar sesión</a></li>
+                    </ul>
+                    <ul class="navbar-nav m-0 p-0 menu-opciones ml-auto" sec:authorize="!isAuthenticated()">
+                        <li class="nav-item"><button type="button" class="btn carrito btn-white" th:href="@{/register/listado}">
+                                <span class="material-symbols-outlined">
+                                    shopping_cart
+                                </span>
+                            </button></li>
+                        <li class="nav-item my-auto">
+                            <form method="post" th:action="@{/logout}">
+                                <button class="btn btn-dark">
+                                    <li class="fas fa-sign-out-alt"></li>
+                                </button>
+                            </form>
+                        </li>
                         <li class="nav-item px-2"><a class="nav-menu-link nav-link d-flex align-items-center" th:href="@{/login/listado}">[[#{plantilla.login}]]</a></li>
                         <li class="nav-item px-2"><a class="nav-menu-link nav-link d-flex align-items-center" th:href="@{/registro/listado}">[[#{plantilla.register}]]</a></li>
                         

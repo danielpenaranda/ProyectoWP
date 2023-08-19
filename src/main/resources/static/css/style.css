@@ -108,6 +108,12 @@ body{
     background: black;
 }
 
+.error-message {
+    color: red;  
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
 
 
 

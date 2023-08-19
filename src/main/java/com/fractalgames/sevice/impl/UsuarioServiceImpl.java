@@ -5,6 +5,7 @@
 package com.fractalgames.sevice.impl;
 
 import com.fractalgames.dao.RegisterDao;
+import com.fractalgames.dao.UsuarioDao;
 import com.fractalgames.domain.Rol;
 import com.fractalgames.domain.Usuario;
 import com.fractalgames.domain.repository.UsuarioRepository;
@@ -20,18 +21,18 @@ import org.springframework.transaction.annotation.Transactional;
 public class UsuarioServiceImpl implements UsuarioService{
     
     @Autowired
-    private UsuarioRepository usuarioRepository;
+    private UsuarioDao usuarioDao;
 
      @Override
      @Transactional (readOnly=true)
     public List<Usuario> getUsuario(Usuario usuario) {
-        return (List<Usuario>) usuarioRepository.findById(usuario.getId()).orElse(null);
+        return (List<Usuario>) usuarioDao.findById(usuario.getId()).orElse(null);
     }
 
     @Override
     @Transactional (readOnly=true)
     public List<Usuario> getUsuario(boolean activo) {
-        var lista = usuarioRepository.findAll();
+        var lista = usuarioDao.findAll();
         if (activo) {
             lista.removeIf(e -> !e.isActivo());
         }
@@ -45,22 +46,23 @@ public class UsuarioServiceImpl implements UsuarioService{
                                         registroDTO.getApellido(),
                                         registroDTO.getEmail(),
                                         registroDTO.getPassword(),
-                                        Arrays.asList(new Rol("ROLE_USER")));
-        return usuarioRepository.save(usuario);
+                                        Arrays.asList(new Rol("USER")));
+        return usuarioDao.save(usuario);
     }
 
     
     @Override
     public boolean validarCredenciales(String email, String password) {
-        Usuario usuario = usuarioRepository.findByEmail(email);
+        Usuario usuario = usuarioDao.findByEmail(email);
         if (usuario == null) {
             return false;
         }
         return usuario.getPassword().equals(password);
     }
     @Override
-    public Usuario findByEmail(String email) {
-        return usuarioRepository.findByEmail(email);
+    public boolean findByEmail(String email) {
+        Usuario usuarioEncontrado = usuarioDao.findByEmail(email);
+        return usuarioEncontrado != null;
     }
 
 

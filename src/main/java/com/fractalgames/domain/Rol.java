@@ -8,10 +8,16 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "rol")
 public class Rol {
@@ -19,36 +25,15 @@ public class Rol {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String nombre;
     
-    public Rol(Long id, String nombre) {
-        this.id = id;
-        this.nombre = nombre;
-    }
-
-    public Rol() {
-    }
-
+    @ManyToOne
+    @JoinColumn(name="id_usuario")
+    private Usuario usuario;
+    
     public Rol(String nombre) {
         this.nombre = nombre;
     }
-    
-
-   
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    
-    public String getNombre() {
-        return nombre;
-    }
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-    
 }
+
