@@ -22,7 +22,7 @@ public class GiftcardsController {
         // Aquí implementar la lógica de filtrado en función de los parámetros minPrice y maxPrice
         
         // Por ahora, supongamos que tienes una lista llamada "filteredGiftCards" con los productos filtrados
-        //model.addAttribute("giftCards", filteredGiftCards);
+        model.addAttribute("giftCards");
         
         return "giftcards/listado";
     }

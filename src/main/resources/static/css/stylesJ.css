@@ -116,7 +116,7 @@ button {
 button:hover {
     background-color: gray;
 }
-button2 {
+button2, button1, button3,button4 {
     
     border: none;
     background-color: grey;
@@ -128,7 +128,7 @@ button2 {
     margin-top: 80px;
 }
 
-button2:hover {
+button2,button1,button3,button4:hover {
     background-color: gray;
 }
 

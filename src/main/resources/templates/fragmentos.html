@@ -18,10 +18,10 @@
                                         </div>
                                         <div class="caja c2">
                                             <h2> Filtrar por precio</h2>
-                                            <button2>Precio: $1,00- $20,00</button2>
-                                            <button2>Precio: $20,00- $30,00</button2>
-                                            <button2>Precio: $30,00- $40,00</button2>
-                                            <button2>Precio: $40,00- $50,00</button2>
+                                            <button1 class="button1" data-min-price="1" data-max-price="20">Precio: $1,00 - $20,00</button1>
+                                            <button2 class="button2" data-min-price="20" data-max-price="30">Precio: $20,00 - $30,00</button2>
+                                            <button3 class="button3" data-min-price="30" data-max-price="40">Precio: $30,00 - $40,00</button3>
+                                            <button4 class="button4" data-min-price="40" data-max-price="50">Precio: $40,00 - $50,00</button4>
 
                                             <div class="imag-container">
                                                 <a th:href="@{/index}" class="navbar-brand logo-home nav justify-content-end">
@@ -211,11 +211,9 @@
                                                 </div>
                                             </div>
                                         </div>
-
                                         <script src="/js/juegos.js"></script>
+                                        <script src="/js/filtrosI.js"></script>
                                         </div>
                                         </section>
-
-
                                         </body>
                                         </html>
