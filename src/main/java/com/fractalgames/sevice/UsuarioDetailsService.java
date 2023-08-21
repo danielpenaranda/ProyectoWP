@@ -5,9 +5,10 @@
 package com.fractalgames.sevice;
 
 import org.springframework.security.core.userdetails.*;
+import org.springframework.stereotype.Service;
 
 
-
+@Service
 public interface UsuarioDetailsService {
 
     public UserDetails loadUserByEmail(String email, String password) throws UsernameNotFoundException;

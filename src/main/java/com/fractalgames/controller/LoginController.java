@@ -4,11 +4,13 @@ package com.fractalgames.controller;
 import com.fractalgames.domain.Usuario;
 import com.fractalgames.sevice.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
@@ -35,6 +37,16 @@ public class LoginController {
         } else {
             attributes.addFlashAttribute("error", "Correo electrónico o contraseña incorrectos");
             return "redirect:/login/listado";
+        }
+    }
+    
+    @GetMapping("/amIAuthenticated")
+    @ResponseBody
+    public String amIAuthenticated(Authentication authentication) {
+        if (authentication != null && authentication.isAuthenticated()) {
+            return "Estoy autenticado.";
+        } else {
+            return "No estoy autenticado.";
         }
     }
 }

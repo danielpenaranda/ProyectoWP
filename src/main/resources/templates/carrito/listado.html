@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="~{layout/plantilla :: head}">
+        <title>FractalGames</title>
+        
+    </head>
+    <body>
+        <header th:replace="~{layout/plantilla :: header}"/>
+        <body>
+            <div class="container">
+                <h2>Carrito de Compras</h2>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Imagen</th>
+                            <th>Nombre del Producto</th>
+                            <th>Precio</th>
+                            <th>Cantidad</th>
+                            <th>Subtotal</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="producto, stat : ${productos}">
+                            <td><img th:src="${producto.key.imagenUrl}" alt="Imagen del producto" width="50" /></td>
+                            <td th:text="${producto.key.nombre}">Nombre del Producto</td>
+                            <td th:text="${producto.key.precio}">$0.00</td>
+                            <td th:text="${producto.value}">1</td>
+                            <td th:text="${producto.key.precio * producto.value}">$0.00</td>
+                            <td>
+                                <!-- Aquí puedes agregar un botón para eliminar el producto del carrito o modificar la cantidad -->
+                                <button th:onclick="'window.location.href=\'/carrito/eliminar/' + ${producto.key.id} + '\''">Eliminar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Aquí puedes agregar más detalles, como el total del carrito o botones para continuar comprando o proceder al pago -->
+                <div class="total">
+                    <h4 th:text="'Total: $' + ${#numbers.formatDecimal(carrito.obtenerTotal(), 1, 2)}">$0.00</h4>
+                </div>
+
+                <div class="acciones-carrito">
+                    <button th:onclick="'window.location.href=\'/index\'">Continuar Comprando</button>
+                    <button th:onclick="'window.location.href=\'/procederPago\'">Proceder al Pago</button>
+                </div>
+            </div>
+        </body>
+        <footer th:replace="~{layout/plantilla :: footer}"/>
+    </body>
+    
+</html>

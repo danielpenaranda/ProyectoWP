@@ -41,7 +41,7 @@
 
                 <div class="menu-right nav justify-content-end menu-opciones">
                     <ul class="navbar-nav m-0 p-0 menu-opciones ml-auto" sec:authorize="isAuthenticated()">
-                        <li class="nav-item"><button type="button" class="btn carrito btn-white" th:href="@{/register/listado}">
+                        <li class="nav-item"><button type="button" class="btn carrito btn-white" th:href="@{/carrito/listado.html}">
                                 <span class="material-symbols-outlined">
                                     shopping_cart
                                 </span>
@@ -50,11 +50,13 @@
                         <li class="nav-item px-2"><a class="nav-menu-link nav-link d-flex align-items-center" th:href="@{/logout}">Cerrar sesión</a></li>
                     </ul>
                     <ul class="navbar-nav m-0 p-0 menu-opciones ml-auto" sec:authorize="!isAuthenticated()">
-                        <li class="nav-item"><button type="button" class="btn carrito btn-white" th:href="@{/register/listado}">
+                        
+                        <li class="nav-item px-2"><a class="nav-menu-link nav-link d-flex align-items-center" th:href="@{/carrito/listado.html}">
+                                
                                 <span class="material-symbols-outlined">
                                     shopping_cart
                                 </span>
-                            </button></li>
+                            </a></li>
                         <li class="nav-item my-auto">
                             <form method="post" th:action="@{/logout}">
                                 <button class="btn btn-dark">
