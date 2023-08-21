@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const buttons = document.querySelectorAll("button1"); // Selecciona todos los botones de filtro
-    const cards = document.querySelectorAll(".c5, .c6, .c7, .c9, .c10, .c12"); // Selecciona todas las tarjetas
+    const cards = document.querySelectorAll(".c3, .c4, .c5, .c6, .c7, .c8, .c9, .c10, .c12"); // Selecciona todas las tarjetas
     buttons.forEach(button => {
         button.addEventListener("click", function () {
             const precioRange = this.textContent.trim(); // Obtiene el texto del botón (por ejemplo, "Precio: $1,00 - $20,00")
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 document.addEventListener("DOMContentLoaded", function () {
     const buttons = document.querySelectorAll("button2"); // Selecciona todos los botones de filtro
-    const cards = document.querySelectorAll(".c3, .c5, .c6, .c7, .c9, .c10, .c12"); // Selecciona todas las tarjetas
+    const cards = document.querySelectorAll(".c3, .c5, .c7, .c8, .c11, .c12"); // Selecciona todas las tarjetas
     buttons.forEach(button => {
         button.addEventListener("click", function () {
             const precioRange = this.textContent.trim(); // Obtiene el texto del botón (por ejemplo, "Precio: $1,00 - $20,00")
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 document.addEventListener("DOMContentLoaded", function () {
     const buttons = document.querySelectorAll("button3"); // Selecciona todos los botones de filtro
-    const cards = document.querySelectorAll(".c3, .c4, .c6, .c7, .c8, .c9, .c10, .c11, .c12"); // Selecciona todas las tarjetas
+    const cards = document.querySelectorAll(".c4, .c6, .c8, .c9, .c10, .c11"); // Selecciona todas las tarjetas
     buttons.forEach(button => {
         button.addEventListener("click", function () {
             const precioRange = this.textContent.trim(); // Obtiene el texto del botón (por ejemplo, "Precio: $1,00 - $20,00")
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 document.addEventListener("DOMContentLoaded", function () {
     const buttons = document.querySelectorAll("button4"); // Selecciona todos los botones de filtro
-    const cards = document.querySelectorAll(".c3, .c4, .c5, .c7, .c8, .c10, .c11"); // Selecciona todas las tarjetas
+    const cards = document.querySelectorAll(".c3, .c4, .c5, .c6, .c7, .c9, .c10, .c11, .c12"); // Selecciona todas las tarjetas
     buttons.forEach(button => {
         button.addEventListener("click", function () {
             const precioRange = this.textContent.trim(); // Obtiene el texto del botón (por ejemplo, "Precio: $1,00 - $20,00")
