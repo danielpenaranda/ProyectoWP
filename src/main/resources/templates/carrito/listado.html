@@ -30,14 +30,14 @@
                             <td th:text="${producto.value}">1</td>
                             <td th:text="${producto.key.precio * producto.value}">$0.00</td>
                             <td>
-                                <!-- Aquí puedes agregar un botón para eliminar el producto del carrito o modificar la cantidad -->
+                                
                                 <button th:onclick="'window.location.href=\'/carrito/eliminar/' + ${producto.key.id} + '\''">Eliminar</button>
                             </td>
                         </tr>
                     </tbody>
                 </table>
 
-                <!-- Aquí puedes agregar más detalles, como el total del carrito o botones para continuar comprando o proceder al pago -->
+                
                 <div class="total">
                     <h4 th:text="'Total: $' + ${#numbers.formatDecimal(carrito.obtenerTotal(), 1, 2)}">$0.00</h4>
                 </div>
